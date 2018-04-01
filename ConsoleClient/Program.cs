@@ -13,14 +13,13 @@ namespace ConsoleClient
             var destination = ConfigurationManager.AppSettings["destinationFilePath"];
 
             Console.WriteLine($"ByteCopy() done. Total bytes: {ByByteCopy(source, destination)}");
-
-            Console.WriteLine($"InMemoryByteCopy() done. Total bytes: {InMemoryByByteCopy(source, destination)}");
-
-            Console.WriteLine($"ByBlockCopy() done. Total bytes: {ByBlockCopy(source, destination)}");
-
             Console.WriteLine(IsContentEquals(source, destination));
 
-            //etc
+            Console.WriteLine($"InMemoryByteCopy() done. Total bytes: {InMemoryByByteCopy(source, destination)}");
+            Console.WriteLine(IsContentEquals(source, destination));
+
+            Console.WriteLine($"ByBlockCopy() done. Total bytes: {ByBlockCopy(source, destination)}");
+            Console.WriteLine(IsContentEquals(source, destination));
         }
     }
 }
